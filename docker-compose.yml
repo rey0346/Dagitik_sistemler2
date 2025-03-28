@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mpi-node:
+    build: .
+    container_name: mpi-simulasyon
+    volumes:
+      - ./output:/app/output
+
+    environment:
+      - OMP_NUM_THREADS=4
+    stdin_open: true
+    tty: true
+
+
